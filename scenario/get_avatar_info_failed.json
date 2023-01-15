@@ -1,0 +1,11 @@
+{
+    "name": "Get avatar info - Failed Case",
+    "method": "GET",
+    "host": "https://api.sampleapis.com",
+    "path":"/avatar/info",
+    "expected_response": [
+        {
+            "response": "failed"
+        }
+    ]
+}
