@@ -16,3 +16,5 @@ Get avatar info - Success Get Info => Success
 Get hot coffee list - Success Get Hot coffee list => Success
 [Integration Test] End
 ```
+
+You can add another API scenario in `scenario` directory.
