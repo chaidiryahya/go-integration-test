@@ -1,5 +1,7 @@
 # go-integration-test
-API Integration test using golang
+Integration test using golang. The main objective is to compare ACTUAL response of API with the EXPECTED one. The app will tell you if all test is succeed or there's an error from the test. It's usefull to get early failure detection of your app.
+
+For next update, i'll try to add for graphql cases.
 
 ### Prequisites
 - golang 1.18
