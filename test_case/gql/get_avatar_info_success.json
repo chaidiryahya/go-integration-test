@@ -1,0 +1,29 @@
+{
+    "name": "Query Country - Success Get Country Info",
+    "method": "POST",
+    "host": "https://countries.trevorblades.com",
+    "path":"/graphql",
+    "payload":"{\"query\":\"query Query {\\n  country(code: \\\"BR\\\") {\\n    name\\n    native\\n    capital\\n    currency\\n    languages {\\n      code\\n      name\\n    }\\n  }\\n}\",\"variables\":{}}",
+    "header": [
+        {
+            "key" : "content-type",
+            "value": "application/json"
+        }
+    ],
+    "expected_response": {
+        "data": {
+            "country": {
+                "name": "Brazil",
+                "native": "Brasil",
+                "capital": "Brasília",
+                "currency": "BRL",
+                "languages": [
+                    {
+                        "code": "pt",
+                        "name": "Portuguese"
+                    }
+                ]
+            }
+        }
+    }
+}

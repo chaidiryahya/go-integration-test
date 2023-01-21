@@ -1,22 +1,36 @@
 package app
 
-// Scenarios represent slice of scenario
-type ScenarioInfo struct {
+// TestCaseInfo represent slice of scenario
+type TestCaseInfo struct {
 	ID        int
-	Scenarios []Scenario
+	TestCases []TestCase
 }
 
-// Scenarion repsresent the detail of each scenario
-type Scenario struct {
-	Name             string      `json:"name"`
-	Method           string      `json:"method"`
-	Host             string      `json:"host"`
-	Path             string      `json:"path"`
-	ExpectedResponse interface{} `json:"expected_response"`
+// TestCase repsresent the detail of each TestCase
+type TestCase struct {
+	Name             string           `json:"name"`
+	Method           string           `json:"method"`
+	Host             string           `json:"host"`
+	Header           []TestCaseHeader `json:"header"`
+	Path             string           `json:"path"`
+	Payload          string           `json:"payload"`
+	ExpectedResponse interface{}      `json:"expected_response"`
+}
+
+type TestCaseHeader struct {
+	Key   string `json:"key"`
+	Value string `json:"value"`
 }
 
 type CallAPIParam struct {
-	Host   string
-	Path   string
-	Method string
+	Host    string
+	Path    string
+	Method  string
+	Payload string
+	Headers []Header
+}
+
+type Header struct {
+	Key   string
+	Value string
 }
